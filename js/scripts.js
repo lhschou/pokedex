@@ -1,6 +1,7 @@
-let pokemonList = [{
+let pokemonList = [
+{
 	name: 'Bulbasaur',
-	height: 0.7
+	height: 0.7,
 	type: ['grass', 'poison']
 },
 
@@ -16,4 +17,3 @@ let pokemonList = [{
 	type: ['water']
 }
 ];
-
