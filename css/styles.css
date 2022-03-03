@@ -1,0 +1,36 @@
+/*
+Colors used 
+
+Text color (blue): #3c58a5;
+Primary color (yellow): #ffcc02; 
+Secondary color (white): #fefefe; 
+
+*/
+
+body {
+    font-family: 'Smooch Sans', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ffcc02;
+    background-color: #3c58a5;
+  }
+
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400px;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
