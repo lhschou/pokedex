@@ -32,16 +32,25 @@ let pokemonRepository = (function () {
 	function getAll() {
 		return pokemonList;
 	}	
+	
+	function showDetails(pokemon) {
+		console.log(pokemon)
+	}
 
 	function addListItem(pokemon) {
 		let pokemonList = document.querySelector('.pokemon-list');
 		let listpokemon = document.createElement('li');
 		let button = document.createElement('button');
+
 		button.innerText = pokemon.name;
 		button.classList.add('button-class')
-		console.log(button.innerText);
+		console.log(button.innerText); 
 		listpokemon.appendChild(button);
 		pokemonList.appendChild(listpokemon);
+
+		button.addEventListener('click', function showDetails () {
+		console.log(pokemon);
+		});
 	}
 
 	return {
