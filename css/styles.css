@@ -16,30 +16,52 @@ body {
     background-color: white;
   }
 
+
 h1 {
-    font-size: 30px;
+    font-size: 60px;
     font-weight: 400;
 }
 
 h2 {
-    font-size: 24px;
-    font-weight: 400;
+  font-size: 50px;
+  font-weight: 400;
 }
 
-h3 {
-    font-size: 18px;
-    font-weight: 400;
+p {
+  font-size: 25px;
+  font-weight: 400;
 }
 
 * {
     box-sizing: border-box;
 }
 
-.pokemon-list {
-    list-style-type: none;
+body {
+  margin: 0;
 }
 
-.button-class {
+.page-header {
+  display: flex;
+  width: 100%;
+  padding-left: 50px;
+  background-color: #3c58a5;
+  height: 150px;
+  position: sticky;
+  top: -30px;
+}
+
+.page-header-inner {
+  height: 120px;
+  position: sticky;
+  top: 0;
+}
+
+.pokemon-list {
+    list-style-type: none;
+    display: grid;
+}
+
+.pokemon-button {
     background-color: #ffcc02;
     border: none; 
     color: #3c58a5;
@@ -47,17 +69,78 @@ h3 {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 5px 2px;
+    font-size: 20px;
+    margin: 7px 10px;
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 8px;
-    width: 200px;
+    width: 70%;
+    max-width: 600px;
+    height: 80px;
 }
 
-.button-class:hover {
+.pokemon-button:hover {
     background-color: #ffcc02d5; 
-    box-shadow: 5px 5px 10px 0 #c49c00d5
+    box-shadow: 5px 5px 10px 0 #c49c00d5;
+    color: #f30909;
 }
 
- 
+#modal-container {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; 
+  overflow: auto; 
+  display: grid;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  margin-top: 50px;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #496fd6;
+  padding: 15px;
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #f30909;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 0;
+}
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  /* CSS for modal container - add your own desired CSS styles here */
+  display: block;
+}
+
+.pokemon-image-class {
+  background-color: #ffcc02;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgray;
+}
