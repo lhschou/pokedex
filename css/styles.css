@@ -12,8 +12,8 @@ body {
     font-weight: 200;
     font-size: 16px;
     line-height: 1.6;
-    color: #ffcc02;
-    background-color: white;
+    color: #3c58a5;
+    background-color: rgb(235, 235, 235);
   }
 
 
@@ -25,6 +25,7 @@ h1 {
 h2 {
   font-size: 50px;
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 p {
@@ -40,43 +41,51 @@ body {
   margin: 0;
 }
 
+.header-logo {
+  height: 80px;
+  margin-top: 10px;
+}
+
 .page-header {
   display: flex;
   width: 100%;
-  padding-left: 50px;
+  padding-left: 25px;
   background-color: #3c58a5;
-  height: 150px;
+  height: 100px;
   position: sticky;
-  top: -30px;
+  top: -10px;
+  border-bottom: solid black 2px;
 }
 
 .page-header-inner {
-  height: 120px;
   position: sticky;
-  top: 0;
+  display: flex;
+  height: 80px;
 }
 
 .pokemon-list {
     list-style-type: none;
-    display: grid;
+    column-count: 4;
+    margin: 20px 15px;
+    padding: 10px;
 }
 
 .pokemon-button {
     background-color: #ffcc02;
-    border: none; 
+    border: solid black; 
     color: #3c58a5;
-    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 7px 10px;
+    text-transform: capitalize;
+    display:inline-block;
+    font-size: 25px;
+    margin: 10px 0px;
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 8px;
-    width: 70%;
+    height: 70px;
+    width: 100%;
     max-width: 600px;
-    height: 80px;
 }
 
 .pokemon-button:hover {
@@ -92,7 +101,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; 
   background: rgba(0, 0, 0, 0.5);
   z-index: 999; 
   overflow: auto; 
@@ -105,20 +114,21 @@ body {
   margin-top: 50px;
   display: inline-block;
   box-sizing: border-box;
-  background: #496fd6;
+  background: rgb(235, 235, 235);
   padding: 15px;
   width: 100%;
   max-width: 500px;
-  text-align: left;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .modal-close {
   float: right;
-  -webkit-appearance: none;
   border: 0;
   background: none;
   color: #f30909;
 }
+
 
 .modal h2 {
   margin-top: 0;
@@ -133,14 +143,25 @@ body {
 }
 
 #modal-container.is-visible {
-  /* CSS for modal container - add your own desired CSS styles here */
   display: block;
 }
 
 .pokemon-image-class {
-  background-color: #ffcc02;
+  background-color: rgb(235, 235, 235);
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: lightgray;
+  width: 50%;
+}
+
+@media all and (max-width: 500px) {
+  .pokemon-list {
+    column-count: 2;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width: 750px) {
+  .pokemon-list {
+    column-count: 3;
+  }
 }
