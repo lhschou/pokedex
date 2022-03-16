@@ -105,7 +105,7 @@ let pokemonRepository = (function () {
 
     let pokemonName = $('<h1>' + pokemon.name + '</h1>');
     let pokemonTypes = $('<p>' + 'Types: ' + pokemon.types.map(item => item.type.name).join(", ") + '</p>');
-    let pokemonHeight = $('<p>' + 'Height: ' + pokemon.height);
+    let pokemonHeight = $('<p>' + 'Height: ' + pokemon.height + '</p>');
     let pokemonWeight = $('<p>' + 'Weight: ' + pokemon.weight + '</p>');
     let pokemonAbilities = $('<p>' + 'Abilities: ' + pokemon.abilities.map(item => item.ability.name).join(", ") + '</p>');
     let pokemonImage = $('<img class=\'pokemon-modal-image\'>');
